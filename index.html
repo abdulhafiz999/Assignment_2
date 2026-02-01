@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎬 Movie Explorer</h1>
+      <button id="themeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+      <section class="search-area">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search movies (e.g. Inception)"
+        />
+        <button id="searchBtn">Search</button>
+        <p id="statusMessage"></p>
+      </section>
+
+      <section id="results">
+        <h2>Search Results</h2>
+        <div id="movieGrid" class="grid"></div>
+      </section>
+
+      <section id="watchlist-section">
+        <h2>My Watchlist (this session only)</h2>
+        <div id="watchlistGrid" class="grid"></div>
+        <p id="watchlistEmpty">Your watchlist is empty.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
