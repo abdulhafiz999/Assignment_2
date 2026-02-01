@@ -8,9 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color: #333;
-  transition:
-    background 0.4s,
-    color 0.4s;
+  transition: all 0.4s;
   line-height: 1.6;
 }
 
@@ -28,15 +26,16 @@ header {
   align-items: center;
 }
 
-.dark-mode header {
-  background: #1e1e1e;
-}
-
-h1 {
+h1,
+h2 {
   color: #2c3e50;
 }
 
-.dark-mode h1 {
+.dark-mode header {
+  background: #1e1e1e;
+}
+.dark-mode h1,
+.dark-mode h2 {
   color: #e0e0e0;
 }
 
@@ -95,27 +94,29 @@ main {
   background: #c0392b;
 }
 
-#statusMessage {
-  margin-top: 1rem;
-  font-style: italic;
+#statusMessage,
+#watchlistEmpty {
   color: #666;
+  font-style: italic;
 }
 
-.dark-mode #statusMessage {
+#statusMessage {
+  margin-top: 1rem;
+}
+#watchlistEmpty {
+  text-align: center;
+}
+
+.dark-mode #statusMessage,
+.dark-mode #watchlistEmpty {
   color: #aaa;
 }
 
 section {
   margin-bottom: 3rem;
 }
-
 h2 {
   margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
-.dark-mode h2 {
-  color: #e0e0e0;
 }
 
 .grid {
@@ -129,9 +130,7 @@ h2 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -160,22 +159,21 @@ h2 {
   color: #2c3e50;
 }
 
-.dark-mode .movie-title {
-  color: #e0e0e0;
-}
-
 .movie-year {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
+.dark-mode .movie-title {
+  color: #e0e0e0;
+}
 .dark-mode .movie-year {
   color: #aaa;
 }
 
-.add-to-watchlist {
-  background: #27ae60;
+.add-to-watchlist,
+.remove-from-watchlist {
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -183,6 +181,10 @@ h2 {
   cursor: pointer;
   width: 100%;
   transition: background 0.3s;
+}
+
+.add-to-watchlist {
+  background: #27ae60;
 }
 
 .add-to-watchlist:hover {
@@ -191,27 +193,10 @@ h2 {
 
 .remove-from-watchlist {
   background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  transition: background 0.3s;
 }
 
 .remove-from-watchlist:hover {
   background: #c0392b;
-}
-
-#watchlistEmpty {
-  text-align: center;
-  color: #666;
-  font-style: italic;
-}
-
-.dark-mode #watchlistEmpty {
-  color: #aaa;
 }
 
 .movie-details {
