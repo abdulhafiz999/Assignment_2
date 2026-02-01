@@ -1,5 +1,5 @@
 // Replace with your actual OMDb API key
-const API_KEY = "http://www.omdbapi.com/?i=tt3896198&apikey=e6392887";
+const API_KEY = "e6392887";
 const API_URL = "https://www.omdbapi.com/";
 
 // Global variables
